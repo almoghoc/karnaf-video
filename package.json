@@ -1,0 +1,38 @@
+{
+  "name": "karnaf-video",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion render MainSequence out/karnaf-promo-final.mp4",
+    "render:draft": "remotion render MainSequence out/output-draft.mp4 --quality 50",
+    "render:final": "remotion render MainSequence out/karnaf-promo-final.mp4 --quality 95 --codec h264",
+    "render:square": "remotion render MainSequence out/karnaf-promo-square.mp4 --height 1080 --width 1080",
+    "render:story": "remotion render MainSequence out/karnaf-promo-story.mp4 --height 1920 --width 1080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:24915/git/almoghoc/karnaf-video"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/bundler": "^4.0.422",
+    "@remotion/cli": "^4.0.422",
+    "@remotion/google-fonts": "^4.0.422",
+    "@remotion/renderer": "^4.0.422",
+    "@remotion/tailwind": "^4.0.422",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.24",
+    "lucide-react": "^0.564.0",
+    "postcss": "^8.5.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.422",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
+  }
+}
