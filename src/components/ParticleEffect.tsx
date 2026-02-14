@@ -18,7 +18,7 @@ interface ParticleEffectProps {
 
 export const ParticleEffect: React.FC<ParticleEffectProps> = ({
   count = 30,
-  color = 'rgba(139, 92, 246, 0.3)',
+  color = 'rgba(249, 115, 22, 0.3)',
   style,
 }) => {
   const frame = useCurrentFrame();

@@ -30,7 +30,7 @@ export const Scene3_RhinoIntro: React.FC = () => {
     extrapolateRight: 'clamp',
   });
 
-  // Background transition to purple
+  // Background transition to warm orange
   const purpleIntensity = interpolate(frame, [90, 180], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
@@ -38,6 +38,9 @@ export const Scene3_RhinoIntro: React.FC = () => {
 
   // Subtitle
   const subtitleOpacity = fadeIn(frame, 160);
+
+  // Subtext
+  const subtextOpacity = fadeIn(frame, 200);
 
   return (
     <div
@@ -50,7 +53,7 @@ export const Scene3_RhinoIntro: React.FC = () => {
     >
       <GradientBackground variant="dark" />
 
-      {/* Purple overlay fading in */}
+      {/* Orange overlay fading in */}
       <div
         style={{
           position: 'absolute',
@@ -107,13 +110,28 @@ export const Scene3_RhinoIntro: React.FC = () => {
             fontFamily,
             fontSize: 44,
             fontWeight: 600,
-            color: colors.text.secondary,
+            color: colors.accents.rhino,
             direction: 'rtl',
             textAlign: 'center',
             textShadow: `0 0 10px ${colors.glow}`,
           }}
         >
           {SCRIPT.scene3.subtitle}
+        </div>
+
+        {/* Subtext */}
+        <div
+          style={{
+            opacity: subtextOpacity,
+            fontFamily,
+            fontSize: 36,
+            fontWeight: 400,
+            color: colors.text.secondary,
+            direction: 'rtl',
+            textAlign: 'center',
+          }}
+        >
+          {SCRIPT.scene3.subtext}
         </div>
       </div>
     </div>

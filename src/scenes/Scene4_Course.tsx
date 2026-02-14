@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
 import { loadFont } from '@remotion/google-fonts/Assistant';
-import { BookOpen, CheckCircle2 } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import { GradientBackground } from '../components/GradientBackground';
 import { DeviceMockup } from '../components/DeviceMockup';
 import { fadeIn, slideInRight, scaleIn, float } from '../utils/animations';
@@ -124,7 +124,7 @@ export const Scene4_Course: React.FC = () => {
             </span>
           </div>
 
-          {/* Checkmark items */}
+          {/* Numbered step items — matching website design */}
           {SCRIPT.scene4.items.map((item, i) => {
             const itemStartFrame = 120 + i * 15;
             const itemScale = scaleIn(frame, itemStartFrame);
@@ -138,14 +138,27 @@ export const Scene4_Course: React.FC = () => {
                   transform: `scale(${itemScale})`,
                   display: 'flex',
                   alignItems: 'center',
-                  gap: 14,
+                  gap: 16,
                 }}
               >
-                <CheckCircle2
-                  size={28}
-                  color={colors.accents.course}
-                  fill={colors.accents.course + '33'}
-                />
+                <div
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: '50%',
+                    background: colors.accents.course,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontFamily,
+                    fontSize: 18,
+                    fontWeight: 700,
+                    color: '#fff',
+                    flexShrink: 0,
+                  }}
+                >
+                  {i + 1}
+                </div>
                 <span
                   style={{
                     fontFamily,

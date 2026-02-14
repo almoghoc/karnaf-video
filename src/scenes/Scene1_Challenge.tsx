@@ -34,7 +34,7 @@ export const Scene1_Challenge: React.FC = () => {
       }}
     >
       <GradientBackground variant="dark" />
-      <ParticleEffect count={25} color="rgba(139, 92, 246, 0.2)" />
+      <ParticleEffect count={25} color="rgba(249, 115, 22, 0.2)" />
 
       <div
         style={{

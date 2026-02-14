@@ -3,7 +3,7 @@ import { useCurrentFrame, interpolate } from 'remotion';
 import { colors } from '../utils/constants';
 
 interface GradientBackgroundProps {
-  variant?: 'dark' | 'purple' | 'spotlight';
+  variant?: 'dark' | 'warm' | 'spotlight';
   fadeInStart?: number;
   children?: React.ReactNode;
 }
@@ -22,8 +22,8 @@ export const GradientBackground: React.FC<GradientBackgroundProps> = ({
   let background: string;
 
   switch (variant) {
-    case 'purple':
-      background = `linear-gradient(${rotation}deg, ${colors.background.dark}, #1a0a2e, ${colors.background.medium})`;
+    case 'warm':
+      background = `linear-gradient(${rotation}deg, ${colors.background.dark}, #1f1208, ${colors.background.medium})`;
       break;
     case 'spotlight':
       const spotX = 50 + Math.sin(frame * 0.02) * 10;
@@ -31,7 +31,7 @@ export const GradientBackground: React.FC<GradientBackgroundProps> = ({
       background = `radial-gradient(ellipse at ${spotX}% ${spotY}%, ${colors.accents.rhino}33, ${colors.background.dark} 70%)`;
       break;
     default:
-      background = `linear-gradient(${rotation}deg, ${colors.background.dark}, ${colors.background.medium}, #1a0a3e)`;
+      background = `linear-gradient(${rotation}deg, ${colors.background.dark}, ${colors.background.medium}, #1a1208)`;
   }
 
   const opacity = fadeInStart > 0
