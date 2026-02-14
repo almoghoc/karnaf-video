@@ -1,13 +1,10 @@
 import React from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
-import { loadFont } from '@remotion/google-fonts/Assistant';
 import { Star } from 'lucide-react';
 import { GradientBackground } from '../components/GradientBackground';
 import { RhinoIcon } from '../components/RhinoIcon';
 import { fadeIn, scaleIn, animateCounter, glowPulse } from '../utils/animations';
 import { colors, SCRIPT } from '../utils/constants';
-
-const { fontFamily } = loadFont();
 
 export const Scene6_CTA: React.FC = () => {
   const frame = useCurrentFrame();
@@ -62,7 +59,7 @@ export const Scene6_CTA: React.FC = () => {
         {/* Counter */}
         <div
           style={{
-            fontFamily,
+            fontFamily: 'Assistant',
             fontSize: 72,
             fontWeight: 700,
             color: colors.text.primary,
@@ -106,7 +103,7 @@ export const Scene6_CTA: React.FC = () => {
         <div
           style={{
             opacity: ctaOpacity,
-            fontFamily,
+            fontFamily: 'Assistant',
             fontSize: 48,
             fontWeight: 600,
             color: colors.accents.cta,
@@ -128,7 +125,7 @@ export const Scene6_CTA: React.FC = () => {
         >
           <span
             style={{
-              fontFamily,
+              fontFamily: 'Assistant',
               fontSize: 52,
               fontWeight: 700,
               color: colors.text.primary,
@@ -139,7 +136,7 @@ export const Scene6_CTA: React.FC = () => {
           </span>
           <span
             style={{
-              fontFamily,
+              fontFamily: 'Assistant',
               fontSize: 36,
               color: colors.text.secondary,
               opacity: taglineOpacities[0] || 0,
@@ -151,7 +148,7 @@ export const Scene6_CTA: React.FC = () => {
             <span
               key={i}
               style={{
-                fontFamily,
+                fontFamily: 'Assistant',
                 fontSize: 40,
                 fontWeight: 600,
                 color: colors.accents.rhino,
@@ -168,7 +165,7 @@ export const Scene6_CTA: React.FC = () => {
         <div
           style={{
             opacity: urlOpacity,
-            fontFamily,
+            fontFamily: 'Assistant',
             fontSize: 28,
             fontWeight: 400,
             color: colors.text.secondary,

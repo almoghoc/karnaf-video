@@ -1,13 +1,10 @@
 import React from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
-import { loadFont } from '@remotion/google-fonts/Assistant';
 import { BookOpen } from 'lucide-react';
 import { GradientBackground } from '../components/GradientBackground';
 import { DeviceMockup } from '../components/DeviceMockup';
 import { fadeIn, slideInRight, scaleIn, float } from '../utils/animations';
 import { colors, SCRIPT } from '../utils/constants';
-
-const { fontFamily } = loadFont();
 
 export const Scene4_Course: React.FC = () => {
   const frame = useCurrentFrame();
@@ -74,7 +71,7 @@ export const Scene4_Course: React.FC = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontFamily,
+                fontFamily: 'Assistant',
                 fontSize: 32,
                 color: colors.text.primary,
                 direction: 'rtl',
@@ -113,7 +110,7 @@ export const Scene4_Course: React.FC = () => {
             <BookOpen size={44} color={colors.accents.course} />
             <span
               style={{
-                fontFamily,
+                fontFamily: 'Assistant',
                 fontSize: 48,
                 fontWeight: 700,
                 color: colors.text.primary,
@@ -150,7 +147,7 @@ export const Scene4_Course: React.FC = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontFamily,
+                    fontFamily: 'Assistant',
                     fontSize: 18,
                     fontWeight: 700,
                     color: '#fff',
@@ -161,7 +158,7 @@ export const Scene4_Course: React.FC = () => {
                 </div>
                 <span
                   style={{
-                    fontFamily,
+                    fontFamily: 'Assistant',
                     fontSize: 30,
                     fontWeight: 400,
                     color: colors.text.secondary,

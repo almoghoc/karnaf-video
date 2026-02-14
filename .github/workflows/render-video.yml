@@ -1,0 +1,41 @@
+name: Render Karnaf Promo Video
+
+on:
+  push:
+    branches: ['claude/init-remotion-video-g8g25', 'main']
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Ensure Remotion browser
+        run: npx remotion browser ensure
+
+      - name: Render video (landscape 1920x1080)
+        run: npx remotion render MainSequence out/karnaf-promo-final.mp4 --codec h264
+
+      - name: Render video (square 1080x1080)
+        run: npx remotion render MainSequence out/karnaf-promo-square.mp4 --codec h264 --width 1080 --height 1080
+
+      - name: Render video (story 1080x1920)
+        run: npx remotion render MainSequence out/karnaf-promo-story.mp4 --codec h264 --width 1080 --height 1920
+
+      - name: Upload rendered videos
+        uses: actions/upload-artifact@v4
+        with:
+          name: karnaf-promo-videos
+          path: out/*.mp4
+          retention-days: 30

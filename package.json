@@ -19,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fontsource/assistant": "^5.2.9",
     "@remotion/bundler": "^4.0.422",
     "@remotion/cli": "^4.0.422",
     "@remotion/google-fonts": "^4.0.422",

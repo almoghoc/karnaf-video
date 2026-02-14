@@ -1,12 +1,9 @@
 import React from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
-import { loadFont } from '@remotion/google-fonts/Assistant';
 import { AlertTriangle, TrendingDown, Clock } from 'lucide-react';
 import { GradientBackground } from '../components/GradientBackground';
 import { fadeIn, slideInLeft, glowPulse } from '../utils/animations';
 import { colors, SCRIPT } from '../utils/constants';
-
-const { fontFamily } = loadFont();
 
 const iconMap = {
   alert: AlertTriangle,
@@ -88,7 +85,7 @@ export const Scene2_Stakes: React.FC = () => {
               />
               <span
                 style={{
-                  fontFamily,
+                  fontFamily: 'Assistant',
                   fontSize: 36,
                   fontWeight: 700,
                   color: colors.text.primary,

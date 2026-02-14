@@ -1,13 +1,10 @@
 import React from 'react';
 import { useCurrentFrame, interpolate, spring } from 'remotion';
-import { loadFont } from '@remotion/google-fonts/Assistant';
 import { GradientBackground } from '../components/GradientBackground';
 import { ParticleEffect } from '../components/ParticleEffect';
 import { RhinoIcon } from '../components/RhinoIcon';
 import { fadeIn, shake, scaleOvershoot } from '../utils/animations';
 import { colors, SCRIPT } from '../utils/constants';
-
-const { fontFamily } = loadFont();
 
 export const Scene3_RhinoIntro: React.FC = () => {
   const frame = useCurrentFrame();
@@ -91,7 +88,7 @@ export const Scene3_RhinoIntro: React.FC = () => {
         <div
           style={{
             opacity: textOpacity,
-            fontFamily,
+            fontFamily: 'Assistant',
             fontSize: 80,
             fontWeight: 700,
             color: colors.text.primary,
@@ -107,7 +104,7 @@ export const Scene3_RhinoIntro: React.FC = () => {
         <div
           style={{
             opacity: subtitleOpacity,
-            fontFamily,
+            fontFamily: 'Assistant',
             fontSize: 44,
             fontWeight: 600,
             color: colors.accents.rhino,
@@ -123,7 +120,7 @@ export const Scene3_RhinoIntro: React.FC = () => {
         <div
           style={{
             opacity: subtextOpacity,
-            fontFamily,
+            fontFamily: 'Assistant',
             fontSize: 36,
             fontWeight: 400,
             color: colors.text.secondary,

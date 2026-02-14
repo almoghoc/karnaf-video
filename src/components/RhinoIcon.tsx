@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCurrentFrame } from 'remotion';
+import { useCurrentFrame, Img, staticFile } from 'remotion';
 import { glowPulse } from '../utils/animations';
 import { colors } from '../utils/constants';
 
@@ -20,15 +20,25 @@ export const RhinoIcon: React.FC<RhinoIconProps> = ({
   return (
     <div
       style={{
-        fontSize: size,
-        lineHeight: 1,
+        width: size,
+        height: size,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         filter: glow
           ? `drop-shadow(0 0 ${20 + glowIntensity * 20}px ${colors.accents.rhino})`
           : undefined,
         ...style,
       }}
     >
-      🦏
+      <Img
+        src={staticFile('logo.png')}
+        style={{
+          width: size,
+          height: size,
+          objectFit: 'contain',
+        }}
+      />
     </div>
   );
 };

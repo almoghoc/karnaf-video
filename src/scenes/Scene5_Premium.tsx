@@ -1,14 +1,11 @@
 import React from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
-import { loadFont } from '@remotion/google-fonts/Assistant';
 import { Users, Shield, Briefcase, Handshake } from 'lucide-react';
 import { GradientBackground } from '../components/GradientBackground';
 import { DeviceMockup } from '../components/DeviceMockup';
 import { ParticleEffect } from '../components/ParticleEffect';
 import { fadeIn, slideInLeft, scaleIn, float } from '../utils/animations';
 import { colors, SCRIPT } from '../utils/constants';
-
-const { fontFamily } = loadFont();
 
 const itemIcons = [Users, Handshake, Briefcase, Shield];
 
@@ -81,7 +78,7 @@ export const Scene5_Premium: React.FC = () => {
             <Briefcase size={44} color={colors.accents.premium} />
             <span
               style={{
-                fontFamily,
+                fontFamily: 'Assistant',
                 fontSize: 48,
                 fontWeight: 700,
                 color: colors.text.primary,
@@ -116,7 +113,7 @@ export const Scene5_Premium: React.FC = () => {
                 />
                 <span
                   style={{
-                    fontFamily,
+                    fontFamily: 'Assistant',
                     fontSize: 30,
                     fontWeight: 400,
                     color: colors.text.secondary,
@@ -147,7 +144,7 @@ export const Scene5_Premium: React.FC = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontFamily,
+                fontFamily: 'Assistant',
                 fontSize: 32,
                 color: colors.text.primary,
                 direction: 'rtl',

@@ -1,12 +1,9 @@
 import React from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
-import { loadFont } from '@remotion/google-fonts/Assistant';
 import { GradientBackground } from '../components/GradientBackground';
 import { ParticleEffect } from '../components/ParticleEffect';
 import { fadeIn, slideInBottom } from '../utils/animations';
 import { colors, SCRIPT } from '../utils/constants';
-
-const { fontFamily } = loadFont();
 
 export const Scene1_Challenge: React.FC = () => {
   const frame = useCurrentFrame();
@@ -67,7 +64,7 @@ export const Scene1_Challenge: React.FC = () => {
               style={{
                 opacity,
                 transform: `translateY(${translateY}px)`,
-                fontFamily,
+                fontFamily: 'Assistant',
                 fontSize: i === 0 ? 72 : 56,
                 fontWeight: i === 0 ? 700 : 600,
                 color: colors.text.primary,

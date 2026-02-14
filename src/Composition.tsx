@@ -1,6 +1,5 @@
 import React from 'react';
 import { Sequence, useCurrentFrame } from 'remotion';
-import { loadFont } from '@remotion/google-fonts/Assistant';
 import { Scene1_Challenge } from './scenes/Scene1_Challenge';
 import { Scene2_Stakes } from './scenes/Scene2_Stakes';
 import { Scene3_RhinoIntro } from './scenes/Scene3_RhinoIntro';
@@ -9,8 +8,6 @@ import { Scene5_Premium } from './scenes/Scene5_Premium';
 import { Scene6_CTA } from './scenes/Scene6_CTA';
 import { SCENES, colors } from './utils/constants';
 import './style.css';
-
-loadFont();
 
 export const MainSequence: React.FC = () => {
   return (
